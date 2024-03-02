@@ -10,7 +10,7 @@ import {
 import LoadingBar from 'react-top-loading-bar'
 
 const App = () => {
-  const apiKey = process.env.REACT_APP_NEWS_API
+  const apiKey = "a1021fca64174dfdbb27ec5f84f8b903";
   const [progress, setProgress] = useState(0)
 
     return (
@@ -22,7 +22,7 @@ const App = () => {
           />
           <NavBar />
           <Routes>
-            <Route exact path="/" element={<News setProgress={setProgress} apiKey={apiKey} key="general" pageSize={5} country="in" category="general" />}></Route>
+            <Route exact path="/News-App" element={<News setProgress={setProgress} apiKey={apiKey} key="general" pageSize={5} country="in" category="general" />}></Route>
             <Route exact path="/business" element={<News setProgress={setProgress} apiKey={apiKey} key="business" pageSize={5} country="in" category="business" />}></Route>
             <Route exact path="/entertainment" element={<News setProgress={setProgress} apiKey={apiKey} key="entertainment" pageSize={5} country="in" category="entertainment" />}></Route>
             <Route exact path="/general" element={<News setProgress={setProgress} apiKey={apiKey} key="general" pageSize={5} country="in" category="general" />}></Route>
